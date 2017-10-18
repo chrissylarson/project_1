@@ -1,0 +1,351 @@
+/* Embedded Fonts */
+@font-face {
+	font-family: Oswald;
+	src:url(../fonts/Oswald-Regular.ttf);
+}
+
+@font-face {
+	font-family: Oswald-Medium;
+	src:url(../fonts/Oswald-Medium.ttf);
+}
+
+@font-face {
+	font-family: Lato-Italic;
+	src:url(../fonts/Lato-Italic.ttf)
+}
+
+@font-face {
+	font-family: Lato-Light;
+	src:url(../fonts/Lato-Light.ttf)
+}
+
+html,body {
+	height: 100%;
+}
+
+#container {
+	width: 1100px;
+	height: 100%;
+	position: relative;
+	left: 50%;
+	margin-left: -550px;
+}
+
+/* BEGIN 4 sections */
+.section {
+	width: 1100px;
+	height: 105%;
+	overflow: hidden; /* this makes sure that the cat image doesn't go into the margins */
+}
+
+.section_last {
+	width: 1100px;
+	height: 100%;
+	overflow: hidden; /* this makes sure that the cat image doesn't go into the margins */
+}
+
+@-webkit-keyframes grow {
+	0% { background-size: 100%; background-position: 0% 0%; } /* use background-size and background-position to move your background images */
+	100% { background-size: 175%; background-position: 100% 100%; }
+}
+
+#first_bg {
+	background: url(../images/lakes_black.jpg) no-repeat center center fixed;
+	background-color: #efefef; /* optional blending mode controls, delete this if you want to revert to photo's original colors */
+	background-blend-mode: screen; /* ditto */
+	background-size: 100%;
+	-webkit-animation: grow 25s alternate infinite ease-in-out;
+}
+
+#second_bg {
+	background: url(../images/lakes_black.jpg) no-repeat center center fixed;
+	background-color: #dce6ff; /* optional blending mode controls, delete this if you want to revert to photo's original colors */
+	background-blend-mode: screen; /* ditto */
+	background-size: 100%;
+	-webkit-animation: grow 25s alternate infinite ease-in-out;
+}
+
+#third_bg {
+	background: url(../images/lakes_grey02.jpg) no-repeat center center fixed;
+	background-color: black;
+	background-size: 100%;
+	-webkit-animation: grow 25s alternate infinite ease-in-out;
+}
+
+#fourth_bg {
+	background: url(../images/lakes_black.jpg) no-repeat center center fixed;
+	background-color: #dce6ff; /* optional blending mode controls, delete this if you want to revert to photo's original colors */
+	background-blend-mode: screen; /* ditto */
+	background-size: 100%;
+	-webkit-animation: grow 25s alternate infinite ease-in-out;
+}
+
+/* END four sections */
+
+
+/* Begin type animations - FIRST SECTION*/
+/* GREY SECTION */
+
+#title_container {
+	width: 400px;
+	height: 400px;
+	position: relative;
+	left: 50%;
+	top: 15%;
+	margin-left: -175px;
+	-webkit-animation: box 5s forwards ease;
+	animation-delay: 1s;
+}
+
+@-webkit-keyframes box {
+	0% {top: -300px;}
+	100% {top: 100px;}
+}
+
+.title {
+	float: left;
+	font-family: Oswald-Medium;
+	font-size: 8em;
+	color: #325cff;
+}
+
+@-webkit-keyframes bend {
+	0% { left: 150px; opacity: 0; }
+	40% { left: 0px; }
+	100% { left: 60px; opacity: 1; }
+}
+
+#lets {
+	position: absolute;
+	opacity: 0;
+	-webkit-animation: bend 4s forwards;
+	cubic-bezier(0,1,0,1);
+	animation-delay: 1s;
+}
+
+#talk {
+	position: absolute;
+	top: 125px;
+	margin-left: -50px;
+	opacity: 0;
+	-webkit-animation: bend 5s forwards;
+	cubic-bezier(0,1,0,1);
+	animation-delay: 1s;
+}
+
+#lakes {
+	position: absolute;
+	top: 250px;
+	opacity: 0;
+	-webkit-animation: bend 6s forwards;
+	cubic-bezier(0,1,0,1);
+	animation-delay: 1s;
+}
+
+@-webkit-keyframes fade {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
+
+.subhead {
+	font-family: Lato-Italic;
+	text-transform: uppercase;
+}
+
+#title_subhead {
+	position: absolute;
+	opacity: 0;
+	top: 400px;
+	left: 50px;
+	-webkit-animation: fade 3s forwards;
+	animation-delay: 5s;
+}
+
+.logo {
+	position: relative;
+	top: 20%;
+	left:90%;
+}
+
+#logo1 {
+	opacity: 0;
+	-webkit-animation: fade 3s forwards;
+	animation-delay: 5s;
+}
+/* END content - FIRST SECTION */
+
+/* BEGIN THREE CONTENT SECTIONS */
+
+.section_container {
+	width: 650px;
+	height: 400px;
+	position: relative;
+	left: 50%;
+	top: 15%;
+	margin-left: -300px;
+	z-index: 2;
+}
+
+.heading {
+	position: relative;
+	font-family: Oswald;
+	font-size: 6em;
+	color: black;
+	z-index: 1;
+}
+
+.heading_animate {
+	-webkit-animation: color 10s infinite ease;
+}
+
+.heading_animate2 {
+	-webkit-animation: color2 10s infinite ease;
+}
+
+@-webkit-keyframes color {
+	0% { color: black; }
+	10% { color: #325cff; }
+	40% { color: black; }
+	100% { color: black; }
+}
+
+@-webkit-keyframes color2 {
+	0% { color: white; }
+	10% { color: #ed1c24; }
+	40% { color: white; }
+	100% { color: white; }
+}
+.push_right {
+	margin-left:30px;
+	margin-top: -10px;
+}
+
+/* CSS FOR PARAGRAPH CONTENT */
+.content {
+	float: left;
+	font-family: Lato-Light;
+	font-size: 16px;
+	line-height:18px;
+	color: black;
+	margin-left: 170px;
+	margin-top: 20px;
+	z-index: 1;
+}
+
+/* USED IN BLACK/THIRD SECTION */
+.white {
+	color: white;
+}
+
+	/* BEGIN highlighted quotes */
+.quote {
+	float: left;
+	font-family: Lato-Regular;
+	font-size: 18px;
+	color: black;
+	margin-left: 5px;
+	margin-top: 4px;
+}
+
+#quote_container1 {
+	float:left;
+	margin-left: 180px;
+	margin-top: 22px;
+	z-index: 1;
+}
+
+.highlight {
+	width: 0px;
+	height: 0px;
+	opacity: .9;
+	border: solid #fffa3e 1px;
+	background-color: #fffa3e;
+	position: absolute;
+	right: -100px;
+	bottom: -100px;
+	z-index: -1;
+}
+
+@-webkit-keyframes hl1 {
+	0% {  width: 0px;  height: 0px;  }
+	10% {  width: 0px;  height: 26px;  }
+	30% {  width: 290px;  height: 26px;  }
+	100% {  width: 290px;  height: 26px;  }
+}
+
+#hl1 {
+	 left: 180px;
+	 top: 295px;
+	-webkit-animation: hl1 10s infinite alternate linear;
+}
+
+#quote_container2 {
+	float:left;
+	margin-left: 180px;
+	margin-top: 13px;
+	z-index: 1;
+}
+
+@-webkit-keyframes hl2 {
+	0% {  width: 0px;  height: 0px;  }
+	10% {  width: 0px;  height: 26px;  }
+	30% {  width: 320px;  height: 26px;  }
+	100% {  width: 320px;  height: 26px;  }
+}
+
+#hl2 {
+	left: 180px;
+	top: 330px;
+	-webkit-animation: hl2 10s infinite alternate linear;
+}
+/* END BLACK/THIRD SECTION */
+
+/* SECTION FOUR */
+#quote_container3 {
+	float: left;
+	margin-left: 180px;
+	margin-top: 40px;
+	z-index: 1;
+}
+
+@-webkit-keyframes hl3 {
+	0% {  width: 0px;  height: 0px;  }
+	10% {  width: 0px;  height: 26px;  }
+	30% {  width: 360px;  height: 26px;  }
+	100% {  width: 360px;  height: 26px;  }
+}
+
+#hl3 {
+	left: 180px;
+	top: 295px;
+	-webkit-animation: hl3 10s infinite alternate linear;
+}
+	/* END highlighted quotes */
+
+
+.footer {
+	position: absolute;
+	height: 50px;
+	width: 300px;
+	float:left;
+	top: 120%;
+	left:-25%;
+}
+
+.footer_type {
+	float: right;
+	font-family: Lato-Light;
+	font-size: 12px;
+	line-height:15px;
+	color: black;
+	margin-left: 10px;
+	margin-top: 5px;
+}
+
+a {
+	color: #325cff;
+	text-decoration: none;
+}
+/* END SECTION FOUR */
+
+/* END CONTENT SECTIONS */
